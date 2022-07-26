@@ -1,0 +1,322 @@
+:root {
+  font-size: 62.5%;
+
+  --ft-title: 'Staatliches', cursive;
+  --ft-text: 'Palanquin', sans-serif;
+
+  --fts-h1: 4rem;
+  --fts-texting: 2rem;
+
+  --hd-color: #8E9AAF;
+  --h1-color: #FFFFFF;
+  --tbox-color: #CBC0D3;
+  --p-color: #23053A;
+  --main-color: #EFF1FF;
+  --h3-color: #4A4E69;
+  --h3box-color: #FEEAFA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header p,
+.container div:nth-child(5),
+.container div:nth-child(6) {
+  display: none;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+.page {
+  text-align: center;
+}
+
+header {
+  background-color: var(--hd-color);
+  padding-bottom: 3rem;
+}
+
+header h1 {
+  font-family: var(--ft-title);
+  font-weight: 400;
+  font-size: var(--fts-h1);
+  line-height: 3.4rem;
+
+  background-color: var(--tbox-color);
+  color: var(--h1-color);
+
+  padding: 0.8rem 0;
+
+}
+
+header img {
+  margin: 3.2rem 0 3.2rem;
+}
+
+header p {
+  display: none;
+}
+
+main {
+
+  display: column;
+  gap: 3.2rem;
+
+  margin: 1.6rem auto 6rem;
+}
+
+main .container {
+  display: grid;
+  gap: 3.2rem;
+  padding: 0 2rem;
+  margin: 4rem auto 5rem;
+  max-width: 50rem;
+
+}
+
+p {
+  margin: auto;
+  color: var(--p-color);
+  font-size: var(--fts-texting);
+  font-family: var(--ft-text);
+  line-height: 2rem;
+  max-width: 40.5rem;
+  padding: 0 1.5rem;
+}
+
+main .card {
+  position: relative;
+
+}
+
+.card:hover img {
+  transform: scale(1.06);
+}
+
+.container .card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2rem;
+
+  display: block;
+  transition: all ease 0.35s;
+
+}
+
+.card h3 {
+  line-height: 3.4rem;
+  font-family: var(--ft-title);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: var(--fts-texting);
+
+  color: var(--h3-color);
+  background-color: var(--h3box-color);
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+
+  border-radius: 2rem;
+  padding: 0 2.4rem;
+
+  animation: topdown 0.8s 0.7s backwards;
+}
+
+.card h3:hover {
+  cursor: default;
+}
+
+.footer p {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  main p {
+    max-width: 70%;
+    font-size: var(--fts-texting);
+  }
+
+  main .container {
+
+    grid-template-areas:
+      'A B'
+      'D B'
+      'D C';
+    max-width: 90rem;
+  }
+
+  .container .card img {
+    min-width: auto;
+    height: auto;
+  }
+
+  .container div:nth-child(1) {
+    grid-area: A;
+  }
+
+  .container div:nth-child(2) {
+    grid-area: B;
+  }
+
+  .container div:nth-child(3) {
+    grid-area: C;
+  }
+
+  .container div:nth-child(4) {
+    grid-area: D;
+  }
+
+  .footer,
+  .footer p {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    color: #4A4E69;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    max-width: 50rem;
+    margin: 4.5rem auto 0;
+  }
+
+  .footer a {
+    font-weight: 800;
+    text-decoration: none;
+    color: #4A4E69;
+    transition: color ease 0.3s;
+  }
+
+  .footer a:hover {
+    color: #9749d3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page {
+    display: flex;
+  }
+
+  header {
+    min-width: 35rem;
+    height: auto;
+    padding-bottom: auto;
+  }
+
+  header p {
+    max-width: 32rem;
+    margin-top: 4rem;
+    display: block;
+    color: var(--h1-color);
+    font-size: 1.8rem;
+  }
+
+  main p {
+    display: none;
+  }
+
+  .card h3 {
+    top: 1rem;
+    right: 1rem;
+    opacity: 0;
+    transition: all ease 0.4s;
+    animation: topdown1 1s 0.9s;
+    font-size: 1.6rem;
+    margin: auto;
+  }
+
+  .card:hover>h3 {
+    opacity: 1;
+  }
+
+  main .container {
+    max-width: 75%;
+    gap: 2.0rem;
+    grid-template-areas:
+      'A B E'
+      'D B F'
+      'D C F';
+    margin: 4rem auto 5rem;
+    padding: 0 3rem 0;
+  }
+
+  .container div:nth-child(5) {
+    display: block;
+    grid-area: E;
+  }
+
+  .container div:nth-child(6) {
+    display: block;
+    grid-area: F;
+  }
+
+
+}
+
+header,
+main p {
+  animation: topdown 0.7s backwards;
+}
+
+
+
+header h1,
+main p {
+  animation: topdown 0.7s 0.25s backwards;
+}
+
+main .card {
+  animation: leftright 0.7s 0.7s backwards;
+}
+
+@keyframes topdown {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+
+@keyframes leftright {
+
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes topdown1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
