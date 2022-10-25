@@ -1,3 +1,4 @@
+/*project css variables*/
 :root {
   font-size: 62.5%;
 
@@ -22,12 +23,14 @@
   box-sizing: border-box;
 }
 
+/*hiding the alternative header*/
 header p,
 .container div:nth-child(5),
 .container div:nth-child(6) {
   display: none;
 }
 
+/*mobile screen display*/
 body {
   background-color: var(--main-color);
 }
@@ -138,12 +141,14 @@ main .card {
   display: none;
 }
 
+/*Tablet screen display*/
 @media (min-width: 768px) {
   main p {
     max-width: 70%;
     font-size: var(--fts-texting);
   }
 
+  /*grid template areas model for tablet display*/
   main .container {
 
     grid-template-areas:
@@ -158,6 +163,7 @@ main .card {
     height: auto;
   }
 
+  /*mapping template areas of the container*/
   .container div:nth-child(1) {
     grid-area: A;
   }
@@ -198,6 +204,7 @@ main .card {
   }
 }
 
+/*desktop screen display*/
 @media (min-width: 1280px) {
   .page {
     display: flex;
@@ -235,6 +242,7 @@ main .card {
     opacity: 1;
   }
 
+  /*grid template areas model for desktop display*/
   main .container {
     max-width: 75%;
     gap: 2.0rem;
@@ -246,6 +254,7 @@ main .card {
     padding: 0 3rem 0;
   }
 
+  /*mapping the rest of template areas for the containers*/
   .container div:nth-child(5) {
     display: block;
     grid-area: E;
@@ -274,6 +283,8 @@ main p {
 main .card {
   animation: leftright 0.7s 0.7s backwards;
 }
+
+/*animations*/
 
 @keyframes topdown {
 
