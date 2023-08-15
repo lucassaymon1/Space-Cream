@@ -206,13 +206,18 @@ main .card {
 
 /*desktop screen display*/
 @media (min-width: 1280px) {
+  body{
+    height: 100%
+  }
   .page {
     display: flex;
+    position: relative;
+    height: 100%
   }
 
   header {
     min-width: 35rem;
-    height: auto;
+    height: 100vh;
     padding-bottom: auto;
   }
 
@@ -222,6 +227,13 @@ main .card {
     display: block;
     color: var(--h1-color);
     font-size: 1.8rem;
+  }
+
+  main{
+    display: grid;
+    flex-direction: column;
+    place-items: center;
+    gap: 0;
   }
 
   main p {
@@ -265,6 +277,10 @@ main .card {
     grid-area: F;
   }
 
+  .footer, .footer p{
+    margin: 0;
+  }
+
 
 }
 
@@ -272,8 +288,6 @@ header,
 main p {
   animation: topdown 0.7s backwards;
 }
-
-
 
 header h1,
 main p {
