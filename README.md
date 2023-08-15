@@ -1,5 +1,5 @@
 # Space-Cream
-This is a web landing page where you can see a bunch of icy desserts in a pretty responsive layout.
+This is a web landing page where you can visualize a bunch of icy desserts in a pretty responsive layout.
 
 ## Technologies
 the technologies used for the development of this app were `html` and `css`, with the base of such concepts as `mobile first`, `grid areas` and `css animations`.
