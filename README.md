@@ -1,4 +1,4 @@
-# Space-Cream
+# Space Cream
 This is a web landing page where you can visualize a bunch of icy desserts in a pretty responsive layout.
 
 ## Technologies
